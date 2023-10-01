@@ -19,35 +19,14 @@ function App() {
 const dispatch = useDispatch();
 const bio = useSelector(state => state.items);
 
-  // const [usersFetch, setUsersFetch] = useState('https://jsonplaceholder.typicode.com/users');
-//const [bio, setBio] = useState(useSelector(state => state.items));
 const [count, setCount] = useState(bio.length)
-  // useEffect(() => {
-  //   async function startFetching() {
-  //     console.log('fetch')
-  //     setBio(null);
-  //     const result = await fetch(usersFetch);
-  //     let users = await result.json();
-  //     if (!ignore) {
-  //       console.log(users)
-  //       setBio(users);
-  //     }
-  //   }
 
-  //   let ignore = false;
-  //   startFetching();
-  //   return () => {
-  //     ignore = true;
-  //   }
-  // }, [usersFetch]);
 
 
   
   function handleDelete(user) {
     console.log('user id')
     console.log(user);
-    // let newBio = bio.filter((item) => item.id != user);
-    // setBio(newBio);
     alert('Delete succefully!')
    dispatch({type: 'delete', user:user})
   
